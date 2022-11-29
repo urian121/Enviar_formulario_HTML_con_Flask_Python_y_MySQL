@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Formulario HTML con Python- Flask y MySQL</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename = 'imgs/favicon.png') }}">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="Column" style="margin-top: 5%">
+                <h2>Enviar formulario HTML con Flask y Python a MySQL </h2>
+
+                <form action="{{ url_for('registrarForm') }}" method="POST" autocomplete="off">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" class="u-full-width">
+                        </div>
+                        <div class="six columns">
+                            <label for="sexo">Sexo</label>
+                            <select class="u-full-width" name="sexo">
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="six columns">
+                            <label class="example-send-yourself-copy">
+                                Te gusta el canal WeB Developer ? <br>
+                                <input type="radio" name="likes" value="1" checked>
+                                <span class="label-body">Si</span>
+                            </label>
+
+                            <label class="example-send-yourself-copy">
+                                <input type="radio" name="likes" value="0">
+                                <span class="label-body">No</span>
+                            </label>
+                        </div>
+
+                        <div class="six columns">
+                            <label for="perfil">Describe tu perfil</label>
+                            <textarea name="descripcion" class="u-full-width"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row centered">
+                        <div class="seven columns">
+                            <input class="button-primary" type="submit" value="Enviar mi formulario">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
