@@ -11,14 +11,38 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+    <style>
+        .msg{
+            text-align: center;
+            font-size: 4rem;
+            line-height: 1em;
+            font-weight: 800;
+            color: orange;
+            background: #f2f4f8;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
 
+
+  {% if msg %}
+    <p class="msg">{{ msg }}</p>
+  {% endif %}
+
+
     <div class="container">
         <div class="row">
             <div class="Column" style="margin-top: 5%">
-                <h2>Enviar formulario HTML con Flask y Python a MySQL </h2>
+                <h3>
+                    <strong>
+                    Enviar formulario HTML con Flask y Python a MySQL 
+                    </strong>
+                    <hr>
+            </h3>
 
                 <form action="{{ url_for('registrarForm') }}" method="POST" autocomplete="off">
                     <div class="row">
@@ -67,6 +91,12 @@
         </div>
     </div>
 
+    <script>
+    setTimeout(function(){
+        elementoP = document.querySelector('.msg');
+        elementoP.style.display = 'none';
+    }, 2000);
+    </script>
 
 </body>
 
