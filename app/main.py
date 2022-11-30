@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.route('/') 
-def hello_world(): 
+def inicio(): 
     return render_template('public/index.html')
 
 
@@ -41,8 +41,7 @@ def registrarForm():
   
         return render_template('public/index.html', msg='Formulario enviado')
     else:
-        msg =''
-        return render_template('public/index.html', msg = 'Metodo HTTP incorrecto',)
+        return render_template('public/index.html', msg = 'Metodo HTTP incorrecto')
 
 
 if __name__ == '__main__': 

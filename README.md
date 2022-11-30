@@ -19,3 +19,7 @@
 # IMPORTANTE, para correr el proyecto solo debes ejecutar el archivo
 # requirements.txt con el comando pip install -r requirements.txt en el 
 # mismo se encuentran todas las dependecias del proyecto.
+
+# (env)$ deactivate   Para desactivar nuestro entono virtual
+ 
+# Comando para actualizar pip: python -m pip install --upgrade pip
